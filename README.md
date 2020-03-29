@@ -21,7 +21,7 @@ require "rest_countries"
 ```
 
 ```crystal
-canada = RestCountries.getCountry("CAN")
+canada = RestCountries.getCountryByCode("CAN")
 canada.capital  #=> "Ottawa"
 ```
 
