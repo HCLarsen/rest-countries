@@ -7,6 +7,10 @@ module RestCountries
 
   def self.getCountryByCode(code : String) : RestCountries::Country
     data = HTTP::Client.get "https://restcountries.eu/rest/v2/alpha/#{code.downcase}"
-    RestCountries::Country.from_json(data.body)
+    if data.success?
+      RestCountries::Country.from_json(data.body)
+    else
+      raise Exception.new("Rest Countries error: #{data.status_code} #{data.body}")
+    end
   end
 end
