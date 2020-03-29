@@ -1,4 +1,4 @@
-# rest-countries
+# rest_countries
 
 A Crystal wrapper for the Rest [Countries API](https://restcountries.eu/).
 
@@ -8,8 +8,8 @@ A Crystal wrapper for the Rest [Countries API](https://restcountries.eu/).
 
    ```yaml
    dependencies:
-     rest-countries:
-       github: HCLarsen/rest-countries
+     rest_countries:
+       github: HCLarsen/rest_countries
    ```
 
 2. Run `shards install`
@@ -17,7 +17,7 @@ A Crystal wrapper for the Rest [Countries API](https://restcountries.eu/).
 ## Usage
 
 ```crystal
-require "rest-countries"
+require "rest_countries"
 ```
 
 ```crystal
@@ -27,7 +27,7 @@ canada.capital  #=> "Ottawa"
 
 ## Contributing
 
-1. Fork it (<https://github.com/HCLarsen/rest-countries/fork>)
+1. Fork it (<https://github.com/HCLarsen/rest_countries/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
