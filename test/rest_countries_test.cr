@@ -3,11 +3,7 @@ require "webmock"
 
 require "/../src/rest_countries.cr"
 
-file = File.new("test/files/canada.json")
-canada_file = file.gets_to_end
-file.close
-
-WebMock.stub(:get, "https://restcountries.eu/rest/v2/alpha/can").to_return(status: 200, body: canada_file)
+WebMock.stub(:get, "https://restcountries.eu/rest/v2/alpha/can").to_return(status: 200, body: File.read("test/files/canada.json"))
 WebMock.stub(:get, "https://restcountries.eu/rest/v2/alpha/cad").to_return(status: 404, body: "Not Found")
 
 class CountryTest < Minitest::Test
